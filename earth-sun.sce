@@ -57,9 +57,9 @@ function [x2,y2,z2]=inclinaison(x,y,z)
 endfunction
 
 function [x,y,z]=terreRevRot(t)
-    x= terreRev(t).x
-    y=perihelie*sin(t*2*%pi/T)
-    z=0
+    x= terreRev(t).x+rotaT(t).x
+    y= terreRev(t).y+rotaT(t).y
+    z=terreRev(t).y
 endfunction
 
 
